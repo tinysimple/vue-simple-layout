@@ -160,5 +160,5 @@ export default {
 
 效果展示：
 
-![效果1](https://)
+![效果1](https://raw.githubusercontent.com/tinysimple/img-layout/master/src/assets/example1.PNG)
 
