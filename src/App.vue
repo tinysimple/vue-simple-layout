@@ -2,7 +2,23 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <img-layout :options="imgOptions"></img-layout>
+    <img-layout :options="layoutOptions" :border="true">
+      <template slot="box-1">
+        <div>区域一</div>
+      </template>
+      <template slot="box-2">
+        <div>区域二</div>
+      </template>
+      <template slot="box-3">
+        <div>区域三</div>
+      </template>
+      <template slot="box-4">
+        <div>区域四</div>
+      </template>
+      <template slot="box-5">
+        <div>区域五</div>
+      </template>
+    </img-layout>
   </div>
 </template>
 
@@ -14,112 +30,48 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      imgOptions: {
+      layoutOptions: {
         direction: 'row',
-        style: {
-          height: '200px'
-        },
+        height: '200px',
         children: [
           {
-            style: {
-              width: '50%',
-              backgroundColor: 'red',
-            },
-            img: {
-              src: 'https://cn.vuejs.org/images/logo.png',
-              properties: {
-                title: 'Vue 红色背景'
-              },
-              style: {}
-            },
-            // width: '50%',
-            // height: '200px',
-            // backgroundColor: 'red'
+            width: '50%',
+            slot: 'box-1'
           },
           {
             direction: 'column',
-            style: {
-              width: '50%',
-            },
-            // width: '50%',
+            width: '50%',
             children: [
               {
-                style: {
-                  width: '100%',
-                  height: '50%',
-                  backgroundColor: 'green',
-                },
-                img: {
-                  src: 'https://cn.vuejs.org/images/logo.png',
-                  properties: {},
-                  style: {}
-                },
-                // width: '100%',
-                // height: '50%',
-                // backgroundColor: 'green'
+                width: '100%',
+                height: '50%',
+                slot: 'box-2'
               },
               {
                 direction: 'row',
-                style: {
-                  height: '50%',
-                },
-                // height: '50%',
+                height: '50%',
                 children: [
                   {
                     direction: 'column',
-                    style: {
-                      width: '50%',
-                      height: '100%',
-                    },
-                    // width: '50%',
-                    // height: '100%',
+                    width: '50%',
+                    height: '100%',
                     children: [
                       {
-                        style: {
-                          width: '100%',
-                          height: '50%',
-                          backgroundColor: 'blue',
-                        },
-                        img: {
-                          src: 'https://cn.vuejs.org/images/logo.png',
-                          properties: {},
-                          style: {}
-                        },
-                        // width: '100%',
-                        // height: '50%',
-                        // backgroundColor: 'blue'
+                        width: '100%',
+                        height: '50%',
+                        slot: 'box-3'
                       },
                       {
-                        style: {
-                          width: '100%',
-                          height: '50%',
-                          backgroundColor: 'darkslateblue',
-                        },
-                        img: {
-                          src: 'https://cn.vuejs.org/images/logo.png',
-                          properties: {},
-                          style: {}
-                        },
-                        // width: '100%',
-                        // height: '50%',
-                        // backgroundColor: 'darkslateblue'
+                        width: '100%',
+                        height: '50%',
+                        slot: 'box-4'
                       }
                     ]
                   },
                   {
-                    style: {
-                      width: '50%',
-                      height: '100%',
-                      backgroundColor: 'gold',
-                    },
-                    img: {
-                      src: 'https://cn.vuejs.org/images/logo.png',
-                      properties: {},
-                      style: {}
-                    },
-                    // width: '50%',
-                    // height: '100%',
-                    // backgroundColor: 'gold'
+                    width: '50%',
+                    height: '100%',
+                    slot: 'box-5'
                   }
                 ]
               }
@@ -132,7 +84,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

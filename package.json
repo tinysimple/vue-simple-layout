@@ -1,7 +1,14 @@
 {
   "name": "img-layout",
-  "description": "一个基于Vue.js的高度灵活的自定义图片排列组件，基于flex布局",
-  "version": "1.0.0",
+  "description": "一个基于Vue.js的高度灵活的自定义元素排列布局组件，基于flex布局。",
+  "version": "0.0.2",
+  "keywords": [
+    "vue",
+    "component",
+    "webpack",
+    "npm",
+    "package"
+  ],
   "author": "littledust",
   "license": "MIT",
   "private": false,
@@ -26,8 +33,6 @@
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
     "file-loader": "^1.1.4",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",

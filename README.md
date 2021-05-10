@@ -26,121 +26,71 @@ export default {
 使用示例：
 ``` bash
 <template>
-  <img-layout :options="imgOptions"></img-layout>
+  <img-layout :options="layoutOptions" :border="true">
+      <template slot="box-1">
+        <div>区域一</div>
+      </template>
+      <template slot="box-2">
+        <div>区域二</div>
+      </template>
+      <template slot="box-3">
+        <div>区域三</div>
+      </template>
+      <template slot="box-4">
+        <div>区域四</div>
+      </template>
+      <template slot="box-5">
+        <div>区域五</div>
+      </template>
+    </img-layout>
 </template>
 import imgLayout from 'img-layout';
 export default {
   components: { imgLayout },
   data() {
     return {
-      imgOptions: {
+      layoutOptions: {
         direction: 'row',
-        style: {
-          height: '200px'
-        },
+        height: '200px',
         children: [
           {
-            style: {
-              width: '50%',
-              backgroundColor: 'red',
-            },
-            img: {
-              src: 'https://cn.vuejs.org/images/logo.png',
-              properties: {
-                title: 'Vue 红色背景'
-              },
-              style: {}
-            },
-            // 当同时存在width、style.width时，style.width优先级更高。
-            // 能够直接配置的只有width、height、backgroudColor这三个属性，其他的属性设置请在style属性中添加。
-            // width: '50%',
-            // height: '200px',
-            // backgroundColor: 'red'
+            width: '50%',
+            slot: 'box-1'
           },
           {
             direction: 'column',
-            style: {
-              width: '50%',
-            },
-            // width: '50%',
+            width: '50%',
             children: [
               {
-                style: {
-                  width: '100%',
-                  height: '50%',
-                  backgroundColor: 'green',
-                },
-                img: {
-                  src: 'https://cn.vuejs.org/images/logo.png',
-                  properties: {},
-                  style: {}
-                },
-                // width: '100%',
-                // height: '50%',
-                // backgroundColor: 'green'
+                width: '100%',
+                height: '50%',
+                slot: 'box-2'
               },
               {
                 direction: 'row',
-                style: {
-                  height: '50%',
-                },
-                // height: '50%',
+                height: '50%',
                 children: [
                   {
                     direction: 'column',
-                    style: {
-                      width: '50%',
-                      height: '100%',
-                    },
-                    // width: '50%',
-                    // height: '100%',
+                    width: '50%',
+                    height: '100%',
                     children: [
                       {
-                        style: {
-                          width: '100%',
-                          height: '50%',
-                          backgroundColor: 'blue',
-                        },
-                        img: {
-                          src: 'https://cn.vuejs.org/images/logo.png',
-                          properties: {},
-                          style: {}
-                        },
-                        // width: '100%',
-                        // height: '50%',
-                        // backgroundColor: 'blue'
+                        width: '100%',
+                        height: '50%',
+                        slot: 'box-3'
                       },
                       {
-                        style: {
-                          width: '100%',
-                          height: '50%',
-                          backgroundColor: 'darkslateblue',
-                        },
-                        img: {
-                          src: 'https://cn.vuejs.org/images/logo.png',
-                          properties: {},
-                          style: {}
-                        },
-                        // width: '100%',
-                        // height: '50%',
-                        // backgroundColor: 'darkslateblue'
+                        width: '100%',
+                        height: '50%',
+                        slot: 'box-4'
                       }
                     ]
                   },
                   {
-                    style: {
-                      width: '50%',
-                      height: '100%',
-                      backgroundColor: 'gold',
-                    },
-                    img: {
-                      src: 'https://cn.vuejs.org/images/logo.png',
-                      properties: {},
-                      style: {}
-                    },
-                    // width: '50%',
-                    // height: '100%',
-                    // backgroundColor: 'gold'
+                    width: '50%',
+                    height: '100%',
+                    slot: 'box-5'
                   }
                 ]
               }
@@ -154,11 +104,13 @@ export default {
 ```
 注意：
 
-> 当同时存在width、style.width时，style.width优先级更高。
+> 当layoutOptions对象中出现direction字段时，表示为一个容器，不能写入具体的内容，只能用来作为存放其children属性中的父元素。
 
-> 能够直接配置的只有width、height、backgroudColor这三个属性，其他的属性设置请在style属性中添加。
+> direction 为 flex-direction 支持的所有值。
 
 效果展示：
+
+![效果2](https://raw.githubusercontent.com/tinysimple/img-layout/master/src/assets/example2.PNG)
 
 ![效果1](https://raw.githubusercontent.com/tinysimple/img-layout/master/src/assets/example1.PNG)
 
