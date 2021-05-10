@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-layout",
-  "description": "一个基于Vue.js的高度灵活的自定义元素排列布局组件，基于flex布局。",
+  "description": "A highly flexible custom element arrangement layout component based on Vue.js, based on Flex layout.",
   "version": "1.0.0",
   "keywords": [
     "vue",
