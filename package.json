@@ -1,7 +1,7 @@
 {
-  "name": "img-layout",
+  "name": "vue-layout",
   "description": "一个基于Vue.js的高度灵活的自定义元素排列布局组件，基于flex布局。",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "keywords": [
     "vue",
     "component",
@@ -9,10 +9,14 @@
     "npm",
     "package"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinysimple/vue-layout"
+  },
   "author": "littledust",
   "license": "MIT",
   "private": false,
-  "main": "lib/img-layout.js",
+  "main": "lib/vue-layout.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"

@@ -9,10 +9,10 @@ module.exports = {
   output: {
     path: isDev ? path.resolve(__dirname, './dist') : path.resolve(__dirname, './lib'),
     publicPath: '/dist/',
-    filename: isDev ? 'build.js' : 'img-layout.js'
-    // library: 'img-layout',
-    // libraryTarget: 'umd',
-    // umdNamedDefine: true
+    filename: isDev ? 'build.js' : 'vue-layout.js',
+    library: 'vue-layout',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   module: {
     rules: [
