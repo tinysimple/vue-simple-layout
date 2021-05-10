@@ -1,4 +1,4 @@
-# img-layout
+# vue-simple-layout
 
 > 一个基于Vue.js的高度灵活的自定义元素排列布局组件，基于flex布局。
 
@@ -6,27 +6,27 @@
 
 Using npm
 ``` bash
-npm i -S img-layout
+npm i -S vue-simple-layout
 ```
 
 全局组件：
 ``` bash
-import img-layout from 'img-layout';
-Vue.use(img-layout)
+import vueSimpleLayout from 'vue-simple-layout';
+Vue.use(vueSimpleLayout)
 ```
 
 局部组件：
 ``` bash
-import imgLayout from 'img-layout';
+import vueSimpleLayout from 'vue-simple-layout';
 export default {
-  components: { imgLayout },
+  components: { vueSimpleLayout },
 }
 ```
 
 使用示例：
 ``` bash
 <template>
-  <img-layout :options="layoutOptions" :border="true">
+  <vue-simple-layout :options="layoutOptions" :border="true">
       <template slot="box-1">
         <div>区域一</div>
       </template>
@@ -42,11 +42,11 @@ export default {
       <template slot="box-5">
         <div>区域五</div>
       </template>
-    </img-layout>
+    </vue-simple-layout>
 </template>
-import imgLayout from 'img-layout';
+import vueSimpleLayout from 'vue-simple-layout';
 export default {
-  components: { imgLayout },
+  components: { vueSimpleLayout },
   data() {
     return {
       layoutOptions: {
@@ -110,7 +110,7 @@ export default {
 
 效果展示：
 
-![效果2](https://raw.githubusercontent.com/tinysimple/img-layout/master/src/assets/example2.PNG)
+![效果2](https://raw.githubusercontent.com/tinysimple/vue-simple-layout/master/src/assets/example2.PNG)
 
-![效果1](https://raw.githubusercontent.com/tinysimple/img-layout/master/src/assets/example1.PNG)
+![效果1](https://raw.githubusercontent.com/tinysimple/vue-simple-layout/master/src/assets/example1.PNG)
 
