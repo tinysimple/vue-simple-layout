@@ -9,8 +9,8 @@ module.exports = {
   output: {
     path: isDev ? path.resolve(__dirname, './dist') : path.resolve(__dirname, './lib'),
     publicPath: '/dist/',
-    filename: isDev ? 'build.js' : 'vue-layout.js',
-    library: 'vue-layout',
+    filename: isDev ? 'build.js' : 'vue-simple-layout.js',
+    library: 'vue-simple-layout',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },

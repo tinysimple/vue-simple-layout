@@ -1,5 +1,5 @@
 {
-  "name": "vue-layout",
+  "name": "vue-simple-layout",
   "description": "一个基于Vue.js的高度灵活的自定义元素排列布局组件，基于flex布局。",
   "version": "1.0.0",
   "keywords": [
@@ -16,7 +16,7 @@
   "author": "littledust",
   "license": "MIT",
   "private": false,
-  "main": "lib/vue-layout.js",
+  "main": "lib/vue-simple-layout.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
