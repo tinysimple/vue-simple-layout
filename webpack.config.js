@@ -10,9 +10,9 @@ module.exports = {
     path: isDev ? path.resolve(__dirname, './dist') : path.resolve(__dirname, './lib'),
     publicPath: '/dist/',
     filename: isDev ? 'build.js' : 'vue-simple-layout.js',
-    library: 'vue-simple-layout',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    // library: 'vue-simple-layout',
+    // libraryTarget: 'umd',
+    // umdNamedDefine: true
   },
   module: {
     rules: [
@@ -96,6 +96,11 @@ if (process.env.NODE_ENV === 'production') {
   module.exports.devtool = false
   // module.exports.devtool = '#source-map'
   module.exports.externals = /^vue/
+  // 配置打包成npm包的output [start]
+  module.exports.output.library = 'vue-simple-layout'
+  module.exports.output.libraryTarget = 'umd'
+  module.exports.output.umdNamedDefine = true
+  // [end]
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({

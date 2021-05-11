@@ -1,7 +1,7 @@
 {
   "name": "vue-simple-layout",
   "description": "A highly flexible custom element arrangement layout component based on Vue.js, based on Flex layout.",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "keywords": [
     "vue",
     "component",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tinysimple/vue-layout"
+    "url": "https://github.com/tinysimple/vue-simple-layout"
   },
   "author": "littledust",
   "license": "MIT",

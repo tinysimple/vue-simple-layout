@@ -5,13 +5,13 @@
         <slot :name="item.slot" style="width: 100%; height: 100%;">暂无内容</slot>
 			</div>
 			<template v-else>
-				<img-layout :options="item" :key="key" :border="border">
+				<vue-simple-layout :options="item" :key="key" :border="border">
           <template v-if="restSlotKeys && restSlotKeys.length > 0">
 						<template v-for="(slotName, index) in restSlotKeys" :slot="slotName">
 							<slot :name="slotName"></slot>
 						</template>
 					</template>
-        </img-layout>
+        </vue-simple-layout>
 			</template>
 		</template>
 	</div>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'img-layout',
+  name: 'vue-simple-layout',
   props: {
     options: {
       type: Object,

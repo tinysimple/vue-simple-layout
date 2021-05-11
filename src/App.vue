@@ -2,7 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
-    <img-layout :options="layoutOptions" :border="true">
+    <vue-simple-layout :options="layoutOptions" :border="true">
       <template slot="box-1">
         <div>区域一</div>
       </template>
@@ -18,15 +18,15 @@
       <template slot="box-5">
         <div>区域五</div>
       </template>
-    </img-layout>
+    </vue-simple-layout>
   </div>
 </template>
 
 <script>
-import imgLayout from './components/layout/index';
+import vueSimpleLayout from './components/layout/index';
 export default {
   name: 'app',
-  components: { imgLayout },
+  components: { vueSimpleLayout },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
